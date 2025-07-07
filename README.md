@@ -15,18 +15,6 @@
 - **Frontend**: React, Tailwind CSS, React Router
 - **Backend**: Coming soon with MERN Stack (MongoDB, Express, Node.js)
 
-## 📁 Project Structure (Frontend)
-
-/foodvilla
-├── public
-├── src
-│ ├── components
-│ ├── pages
-│ ├── assets
-│ ├── App.js
-│ └── index.js
-└── tailwind.config.js
-
 ## 📦 Installation
 
 ```bash
