@@ -4,4 +4,4 @@ backend/node_modules/
 .env
 dist/
 .DS_Store
-
+/frontend/.parcel-cache
