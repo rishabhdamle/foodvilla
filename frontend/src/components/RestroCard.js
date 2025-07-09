@@ -10,9 +10,9 @@ const RestroCard = (props) => {
         src={CDN_URL + resData.data.cloudinaryImageId}
       ></img>
       <li>{resData.data.name}</li>
-      <li>{resData.data.totalRatingsString}</li>
-      <li>{resData.data.deliveryTime}</li>
-      <li>{resData.data.cuisines.join(", ")}</li>
+      <li>Star rating - {resData.data.avgRating} ⭐</li>
+
+      <li>Cuisine's - {resData.data.cuisines.join(", ")}</li>
     </div>
   );
 };

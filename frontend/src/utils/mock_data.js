@@ -1,4 +1,4 @@
-const restaurantList = [
+let restaurantList = [
   {
     type: "restaurant",
     data: {
@@ -722,7 +722,7 @@ const restaurantList = [
         iconType: "EMPTY",
       },
       promoted: false,
-      avgRating: "--",
+      avgRating: "3.0",
       totalRatings: 0,
       new: false,
     },
