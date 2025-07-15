@@ -1,4 +1,4 @@
-import { LOGO_URL } from "../utils/constants";
+import { LOGO_URL } from "../utils/config.js";
 export const Logo = () => {
   return (
     <div>

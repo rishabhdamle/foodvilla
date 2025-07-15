@@ -1,4 +1,4 @@
-import { CDN_URL } from "../utils/constants.js";
+import { CDN_URL } from "../utils/config.js";
 
 const RestroCard = (props) => {
   const { resData } = props;
@@ -7,12 +7,12 @@ const RestroCard = (props) => {
     <div className="Restro-Card">
       <img
         className="img-hotel-mahi"
-        src={CDN_URL + resData.data.cloudinaryImageId}
+        src={CDN_URL + resData?.info?.cloudinaryImageId}
       ></img>
-      <li>{resData.data.name}</li>
-      <li>Star rating - {resData.data.avgRating} ⭐</li>
+      <li>{resData?.info?.name}</li>
+      <li>Star rating - {resData?.info?.avgRating} ⭐</li>
 
-      <li>Cuisine's - {resData.data.cuisines.join(", ")}</li>
+      <li>Cuisine's - {resData?.info?.cuisines?.join(", ")}</li>
     </div>
   );
 };

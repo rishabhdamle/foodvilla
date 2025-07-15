@@ -1,21 +1,39 @@
 import RestroCard from "./RestroCard";
 import restaurantList from "../utils/mock_data.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Body = () => {
-  let [restaurantList2, setRestroList2] = useState([...restaurantList]);
+  let [restaurantList2, setRestaurantList2] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    const data = await fetch(
+      "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=18.6833028&lng=73.8510597&carousel=true&third_party_vendor=1"
+    );
+    const json = await data.json();
+    console.log(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setRestaurantList2(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  }
+
   return (
     <div>
       <div className="filter-btn">
         <button
           onClick={() => {
             const filteredList = restaurantList2.filter((restro) => {
-              if (restro.data.avgRating > 4) {
+              if (restro.info.avgRating > 4) {
                 return true;
               } else {
                 return false;
               }
             });
-            setRestroList2(filteredList);
+            setRestaurantList2(filteredList);
           }}
         >
           See top reated restaurants by clicking here ⭐
@@ -23,7 +41,7 @@ const Body = () => {
       </div>
       <div className="Restro-Container">
         {restaurantList2.map((restro) => (
-          <RestroCard resData={restro} key={restro.data.id}></RestroCard>
+          <RestroCard key={restro?.info?.id} resData={restro} />
         ))}
       </div>
     </div>
