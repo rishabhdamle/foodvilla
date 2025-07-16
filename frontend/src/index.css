@@ -37,8 +37,8 @@
 
 .img-hotel-mahi {
   width: 100%;
-  border-radius: 20px;
   margin-bottom: 10px;
+  border-radius: 20px;
 }
 
 .Restro-Container {
@@ -73,4 +73,29 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: medium;
+}
+.small-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.title > h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+  margin-top: 50px;
+  margin-left: 35px;
+}
+.headerImagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 20px 20px 20px #f0f0f0;
+}
+.mind-card > img {
+  width: 100px;
+  cursor: pointer;
+}
+.mind-card {
+  margin-left: 30px;
 }
