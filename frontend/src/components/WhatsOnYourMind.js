@@ -1,4 +1,5 @@
 import { IMG_CDN_URL } from "../utils/config";
+
 function WhatsOnYourMind(props) {
   console.log(props);
   console.log(IMG_CDN_URL + props?.imgData?.imageId);
