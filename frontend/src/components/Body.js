@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { swiggyUrl } from "../utils/config.js";
 import RenderData from "./RenderData.js";
 import { Loader } from "./Loader.js";
-
+import ShimmerUI from "./ShimmerUI.js";
 const Body = () => {
   let [restaurantList2, setRestaurantList2] = useState([]);
   let [headerImages, setHeaderImages] = useState([]);
@@ -37,7 +37,7 @@ const Body = () => {
   return (
     <div>
       {isDataIsLoading ? (
-        <Loader></Loader>
+        <ShimmerUI></ShimmerUI>
       ) : (
         <RenderData
           title={title}
