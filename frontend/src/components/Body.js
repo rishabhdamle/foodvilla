@@ -43,6 +43,7 @@ const Body = () => {
           title={title}
           headerImages={headerImages}
           restaurantList2={restaurantList2}
+          setRestaurantList2={setRestaurantList2}
         ></RenderData>
       )}
     </div>

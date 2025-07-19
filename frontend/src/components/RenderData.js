@@ -5,7 +5,7 @@ import WhatsOnYourMind from "./WhatsOnYourMind.js";
 import restaurantList from "../utils/mock_data.js";
 
 function RenderData(props) {
-  const { title, headerImages, restaurantList2 } = props;
+  const { title, headerImages, restaurantList2, setRestaurantList2 } = props;
   return (
     <div>
       <div>
