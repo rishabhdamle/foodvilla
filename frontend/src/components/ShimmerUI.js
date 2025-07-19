@@ -26,6 +26,7 @@ function ShimmerUI() {
         </div>
         <div className="shimmer-3">
           <div className="button"></div>
+          <div className="button"></div>
         </div>
         <div className="shimmer-2">
           <div className="card"></div>
