@@ -3,9 +3,11 @@ import WhatsOnYourMind from "./WhatsOnYourMind";
 import RestroCard from "./RestroCard";
 import WhatsOnYourMind from "./WhatsOnYourMind.js";
 import restaurantList from "../utils/mock_data.js";
+import { useState } from "react";
 
 function RenderData(props) {
   const { title, headerImages, restaurantList2, setRestaurantList2 } = props;
+  const [input, setInput] = useState("");
   return (
     <div>
       <div>
@@ -41,8 +43,26 @@ function RenderData(props) {
             name="search"
             placeholder="What do you want ? search here 🔍"
             className="input-search"
+            value={input.toLocaleLowerCase()}
+            onChange={(e) => {
+              setInput(e.target.value);
+            }}
           ></input>
-          <button className="search-btn">Click</button>
+          {console.log(input)}
+          <button
+            className="search-btn"
+            onClick={() => {
+              let filteredList = restaurantList2.filter((res) => {
+                if (res?.info?.name.toLowerCase().includes(input)) {
+                  return true;
+                }
+              });
+              setRestaurantList2(filteredList);
+              console.log(restaurantList2);
+            }}
+          >
+            Click
+          </button>
         </div>
       </div>
 

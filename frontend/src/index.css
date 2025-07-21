@@ -92,12 +92,20 @@
   padding: 10px;
   border: none;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid #f34079;
   font-family: Arial, Helvetica, sans-serif;
   width: 235px;
   font-weight: bold;
-  font-style: italic;
   margin-right: 5px;
+  color: #fc894d;
+}
+.input-search::placeholder {
+  color: #fc894d;
+}
+.input-search:focus {
+  border-color: #f34079;
+  outline: none;
+  color: #fc894d;
 }
 
 .search-btn {

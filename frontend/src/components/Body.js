@@ -35,7 +35,7 @@ const Body = () => {
   }
 
   return (
-    <div>
+    <div className="body">
       {isDataIsLoading ? (
         <ShimmerUI></ShimmerUI>
       ) : (
