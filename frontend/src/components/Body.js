@@ -12,7 +12,10 @@ const Body = () => {
   let [headerImages, setHeaderImages] = useState([]);
   let [title, setTitle] = useState();
   let [isDataIsLoading, setIsDataIsLoading] = useState(false);
+  let [filteredListCopy, setFilteredListCopy] = useState([]);
+  console.log("Body rendred");
   useEffect(() => {
+    console.log("useEffect called");
     fetchData();
   }, []);
 
@@ -32,6 +35,9 @@ const Body = () => {
     setRestaurantList2(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setFilteredListCopy(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   }
 
   return (
@@ -44,6 +50,8 @@ const Body = () => {
           headerImages={headerImages}
           restaurantList2={restaurantList2}
           setRestaurantList2={setRestaurantList2}
+          filteredListCopy={filteredListCopy}
+          setFilteredListCopy={setFilteredListCopy}
         ></RenderData>
       )}
     </div>

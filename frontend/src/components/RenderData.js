@@ -6,8 +6,16 @@ import restaurantList from "../utils/mock_data.js";
 import { useState } from "react";
 
 function RenderData(props) {
-  const { title, headerImages, restaurantList2, setRestaurantList2 } = props;
+  const {
+    title,
+    headerImages,
+    restaurantList2,
+    setRestaurantList2,
+    filteredListCopy,
+    setFilteredListCopy,
+  } = props;
   const [input, setInput] = useState("");
+
   return (
     <div>
       <div>
@@ -57,8 +65,8 @@ function RenderData(props) {
                   return true;
                 }
               });
-              setRestaurantList2(filteredList);
-              console.log(restaurantList2);
+
+              setFilteredListCopy(filteredList);
             }}
           >
             Click
@@ -67,7 +75,7 @@ function RenderData(props) {
       </div>
 
       <div className="Restro-Container">
-        {restaurantList2.map((restro) => (
+        {filteredListCopy.map((restro) => (
           <RestroCard key={restro?.info?.id} resData={restro} />
         ))}
       </div>
