@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import Logo from "./Logo";
 const Header = () => {
   let [isLogin, setIsLogin] = useState("Login");
@@ -8,11 +9,23 @@ const Header = () => {
         <Logo></Logo>
       </div>
       <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>AboutUs</li>
-          <li>ContactUs</li>
-          <li>Cart</li>
+        <ul className="h-u">
+          <li className="h-li">
+            <Link to="/" className="link">
+              Home
+            </Link>
+          </li>
+          <li className="h-li">
+            <Link to="/Aboutus" className="link">
+              AboutUs
+            </Link>
+          </li>
+          <li className="h-li">
+            <Link to="/Contactus" className="link">
+              Contactus
+            </Link>
+          </li>
+          <li className="h-li">Cart</li>
           <li
             className="auth-btn"
             onClick={() => {

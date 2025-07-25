@@ -9,7 +9,6 @@ function ErrorPage() {
       <h2>
         {error.status} : {error.statusText}
       </h2>
-      <h2>{error.error.message}</h2>
     </>
   );
 }

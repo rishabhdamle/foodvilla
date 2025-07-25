@@ -1,11 +1,7 @@
-import RestroCard from "./RestroCard";
-import WhatsOnYourMind from "./WhatsOnYourMind.js";
-import Title from "./Title.js";
-import restaurantList from "../utils/mock_data.js";
 import { useEffect, useState } from "react";
-import { swiggyUrl } from "../utils/config.js";
+
 import RenderData from "./RenderData.js";
-import { Loader } from "./Loader.js";
+
 import ShimmerUI from "./ShimmerUI.js";
 const Body = () => {
   let [restaurantList2, setRestaurantList2] = useState([]);
