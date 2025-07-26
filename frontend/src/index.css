@@ -138,14 +138,17 @@
 .headerImagesContainer {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 30px;
 }
 .mind-card > img {
   width: 100px;
   cursor: pointer;
 }
 .mind-card {
-  margin-left: 30px;
-  background-color: #fef2f2;
+  margin: 10px;
+  background-color: #fde2e2;
+  padding: 2px;
+  border-radius: 5px;
 }
 .loader {
   display: flex;
