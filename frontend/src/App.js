@@ -1,13 +1,12 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import AppLayout from "./components/AppLayout";
 import Aboutus from "./components/Aboutus";
 import ErrorPage from "./components/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Body from "./components/Body";
-import restaurantList from "./utils/mock_data";
 import Aboutus from "./components/Aboutus";
 import Contactus from "./components/Contactus";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/Contactus",
         element: <Contactus></Contactus>,
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu></RestaurantMenu>,
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,

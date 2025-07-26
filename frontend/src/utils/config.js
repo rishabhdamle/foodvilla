@@ -9,3 +9,6 @@ export const IMG_CDN_URL =
 
 export const swiggyUrl =
   "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=18.6833028&lng=73.8510597&carousel=true&third_party_vendor=1";
+
+export const FETCH_MENU_URL =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.6833028&lng=73.8510597&restaurantId=";
