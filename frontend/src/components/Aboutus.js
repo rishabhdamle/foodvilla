@@ -1,12 +1,9 @@
 function Aboutus() {
   return (
-    <>
-      <div>
-        We build innovative products & solutions that deliver unparalleled
-        convenience to urban consumers. The best part? Every bit of your work at
-        FoodVilla will help elevate the lives of our users across India.
-      </div>
-    </>
+    <div>
+      <h1>About</h1>
+      <h2>This a foodvilla - the best food dilivery app for you</h2>
+    </div>
   );
 }
 
