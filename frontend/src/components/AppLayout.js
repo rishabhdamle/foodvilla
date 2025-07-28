@@ -1,5 +1,5 @@
 import Header from "./Header";
-import { Outlet, Link } from "react-router";
+import { Outlet } from "react-router";
 const AppLayout = () => {
   return (
     <div>
