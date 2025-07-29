@@ -4,12 +4,11 @@ import { useParams } from "react-router";
 import ShimmerUI from "./ShimmerUI";
 function RestaurantMenu() {
   const [restaurantData, setRestaurantData] = useState(null);
-
+  const { resId } = useParams();
   useEffect(() => {
     fetchMenu();
   }, []);
 
-  const { resId } = useParams();
   console.log("ResId : " + resId);
   async function fetchMenu() {
     const data = await fetch(FETCH_MENU_URL + resId);
