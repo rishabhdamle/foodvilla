@@ -7,15 +7,15 @@ class User extends React.Component {
       count: 0,
       salaryPackage: "1cr",
     };
-    console.log("Child constructor is called");
+    console.log(this.props.name + " constructor is called");
   }
   componentDidMount() {
-    console.log("Child component is mounted");
+    console.log(this.props.name + "component is mounted");
   }
   render() {
     const { name, designation } = this.props;
     const { count, salaryPackage } = this.state;
-    console.log("Child render is called");
+    console.log(this.props.name + "render is called");
     return (
       <div>
         <h1>Name : {name}</h1>
