@@ -12,9 +12,11 @@ class Aboutus extends React.Component {
     console.log("Parent render is called");
     return (
       <div>
-        <User name={"First"} designation={"Co-Founder & CEO"}></User>
+        {/* <User name={"First"} designation={"Co-Founder & CEO"}></User>
         <User name={"Second"} designation={"Co-Founder & CEO"}></User>
-        <User name={"Third"} designation={"Co-Founder & CEO"}></User>
+        <User name={"Third"} designation={"Co-Founder & CEO"}></User> */}
+
+        <User></User>
       </div>
     );
   }
