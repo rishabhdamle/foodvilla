@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 import RenderData from "./RenderData.js";
 
 import ShimmerUI from "./ShimmerUI.js";
@@ -9,6 +9,7 @@ const Body = () => {
   let [title, setTitle] = useState();
   let [isDataIsLoading, setIsDataIsLoading] = useState(false);
   let [filteredListCopy, setFilteredListCopy] = useState([]);
+  const onlineStatus = useOnlineStatus();
   console.log("Body rendred");
   useEffect(() => {
     console.log("useEffect called");
@@ -36,6 +37,9 @@ const Body = () => {
     );
   }
 
+  if (onlineStatus == false) {
+    return <h1>The network connection has been lost.</h1>;
+  }
   return (
     <div className="body">
       {isDataIsLoading ? (
