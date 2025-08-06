@@ -14,11 +14,13 @@
     "parcel": "^2.15.4"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "dom": "^0.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.0",
     "react-shimmer-effects": "^1.0.4",
-    "react-spinners": "^0.17.0"
+    "react-spinners": "^0.17.0",
+    "tailwindcss": "^4.1.11"
   }
 }

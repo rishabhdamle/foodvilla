@@ -1,4 +1,4 @@
-.hedaer {
+/* .hedaer {
   display: flex;
   justify-content: space-around;
   box-shadow: 20px 20px 20px #fff7ed;
@@ -205,4 +205,6 @@
 .link {
   text-decoration: none;
   color: #f0f0f0;
-}
+} */
+
+@import "tailwindcss";
