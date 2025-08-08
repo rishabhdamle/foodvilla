@@ -41,7 +41,7 @@ const Body = () => {
     return <h1>The network connection has been lost.</h1>;
   }
   return (
-    <div className="body">
+    <div className="bg-orange-50 text-orange-950">
       {isDataIsLoading ? (
         <ShimmerUI></ShimmerUI>
       ) : (

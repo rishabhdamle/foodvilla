@@ -4,29 +4,29 @@ import Logo from "./Logo";
 const Header = () => {
   let [isLogin, setIsLogin] = useState("Login");
   return (
-    <div className="hedaer">
-      <div className="logo-container">
+    <div className="flex justify-between bg-orange-400 font-sans shadow-2xl">
+      <div className="w-28 ml-18 mt-5 mb-5  ">
         <Logo></Logo>
       </div>
-      <div className="nav-items">
-        <ul className="h-u">
-          <li className="h-li">
+      <div>
+        <ul className="flex mt-14  font-sans font-extrabold text-white mr-25">
+          <li className="h-li pr-10 ">
             <Link to="/" className="link">
               Home
             </Link>
           </li>
-          <li className="h-li">
+          <li className="h-li pr-10">
             <Link to="/Aboutus" className="link">
               AboutUs
             </Link>
           </li>
-          <li className="h-li">
+          <li className="h-li pr-10">
             <Link to="/Contactus" className="link">
               Contactus
             </Link>
           </li>
-          <li className="h-li">Cart</li>
-          <li className="h-li">
+          <li className="h-li pr-10">Cart</li>
+          <li className="h-li pr-10">
             <Link to={"/Grocery"} className="link">
               Grocery
             </Link>
